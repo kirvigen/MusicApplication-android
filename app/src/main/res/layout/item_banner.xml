@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <android.support.v7.widget.CardView
+       android:orientation="vertical"
+        android:id="@+id/player"
+        app:cardElevation="0dp"
+        android:clickable="true"
+        android:foreground="?attr/selectableItemBackground"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="10dp"
+        android:layout_width="340dp"
+        android:layout_height="140dp">
+
+            <ImageView
+                android:id="@+id/img"
+                android:scaleType="centerCrop"
+                android:src="@drawable/test"
+                android:layout_width="match_parent"
+                android:layout_height="140dp" />
+           <RelativeLayout
+
+               android:layout_alignParentBottom="true"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+               >
+
+          </RelativeLayout>
+        <TextView
+
+            android:id="@+id/text"
+            android:textStyle="bold"
+            android:layout_marginLeft="20dp"
+            android:layout_marginBottom="5dp"
+            android:textSize="20sp"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="bottom"
+            android:textColor="@color/white"
+            android:text="MoRGENSHTERN"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </android.support.v7.widget.CardView>
+
+</RelativeLayout>

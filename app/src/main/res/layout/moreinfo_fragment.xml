@@ -1,0 +1,410 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent"
+ >
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/nested"
+        android:overScrollMode="never"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+
+            android:layout_marginTop="10dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/moreInfo"
+                android:orientation="vertical"
+                android:gravity="center|top"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/avatar"
+                    android:layout_marginTop="30dp"
+                    android:visibility="gone"
+                    android:layout_width="160dp"
+                    android:layout_height="160dp" />
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <RelativeLayout
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:id="@+id/card"
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <android.support.v7.widget.CardView
+                            app:cardCornerRadius="5dp"
+
+                            app:cardElevation="4dp"
+                            android:layout_margin="5dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                            <ImageView
+                                android:id="@+id/img"
+                                android:scaleType="centerCrop"
+                                android:layout_width="160dp"
+                                android:layout_height="160dp" />
+
+                        </android.support.v7.widget.CardView>
+                    </RelativeLayout>
+                    <ImageView
+                        android:id="@+id/like"
+                        android:foregroundGravity="center_vertical"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:layout_below="@id/card"
+
+                        android:layout_toEndOf="@id/card"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp" />
+                </RelativeLayout>
+
+
+                <TextView
+                    android:textColor="#000"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    android:id="@+id/title"
+                    android:text=""
+                    android:gravity="center"
+                    android:textAlignment="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:textColor="@color/red_light"
+                    android:textStyle="normal"
+                    android:textSize="15sp"
+                    android:id="@+id/artist"
+                    android:text=""
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    />
+            </LinearLayout>
+            <RelativeLayout
+                android:visibility="gone"
+                android:id="@+id/banners"
+                android:layout_gravity="center"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recyclerBanner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                </android.support.v7.widget.RecyclerView>
+                <com.tmall.ultraviewpager.UltraViewPager
+                    android:id="@+id/ultraviewpager"
+                    android:layout_centerInParent="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="160dp">
+
+                </com.tmall.ultraviewpager.UltraViewPager>
+                <!--<com.tmall.ultraviewpager.UltraViewPager-->
+                    <!--android:id="@+id/ultra_viewpager"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--/>-->
+            </RelativeLayout>
+            <LinearLayout
+                android:id="@+id/album"
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_marginTop="20dp"
+                    android:gravity="center"
+                    android:layout_marginBottom="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_weight="1"
+
+
+                        android:textSize="20sp"
+                        android:layout_marginLeft="20dp"
+                        android:text="Альбомы:"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:id="@+id/moreAlbums"
+                        android:textSize="15sp"
+                        android:textColor="@color/red_light"
+                        android:text="@string/more"
+                        android:layout_marginRight="20sp"
+                        android:textStyle="bold"
+                        android:gravity="bottom"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+                <RelativeLayout
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/recyclerAlbum"
+                        android:nestedScrollingEnabled="false"
+                        android:layout_marginLeft="20dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="175dp">
+
+                    </android.support.v7.widget.RecyclerView>
+
+
+
+                </RelativeLayout>
+            </LinearLayout>
+            <ProgressBar
+                android:id="@+id/prograss_bar"
+                android:layout_gravity="center"
+                android:layout_width="40dp"
+                android:layout_height="40dp" />
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/list"
+                android:layout_marginTop="10dp"
+                android:nestedScrollingEnabled="false"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                >
+
+            </android.support.v7.widget.RecyclerView>
+            <android.support.v7.widget.CardView
+                android:layout_marginRight="50dp"
+                android:id="@+id/moreaudio"
+                android:visibility="gone"
+                android:layout_marginTop="15dp"
+                android:alpha="0.7"
+                app:cardBackgroundColor="@color/gray"
+                android:foreground="?attr/selectableItemBackground"
+                android:clickable="true"
+                app:cardCornerRadius="25dp"
+                android:layout_marginBottom="20dp"
+                android:layout_marginLeft="50dp"
+                android:layout_width="match_parent"
+                android:layout_height="40dp">
+                <ImageView
+                    android:src="@drawable/button_bg"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+                <TextView
+                    android:layout_gravity="center"
+                    android:textSize="20sp"
+                    android:textColor="@color/white"
+                    android:text="@string/more_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </android.support.v7.widget.CardView>
+            <LinearLayout
+                android:id="@+id/artists"
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_marginTop="20dp"
+                    android:gravity="center"
+                    android:layout_marginBottom="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_weight="1"
+
+
+                        android:textSize="20sp"
+                        android:layout_marginLeft="20dp"
+                        android:text="@string/reletive_artist"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:id="@+id/moreArtist"
+                        android:textSize="15sp"
+                        android:textColor="@color/red_light"
+                        android:text="@string/more"
+                        android:layout_marginRight="20sp"
+                        android:textStyle="bold"
+                        android:gravity="bottom"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+                <RelativeLayout
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/recyclerArtist"
+                        android:nestedScrollingEnabled="false"
+                        android:layout_marginLeft="20dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="175dp">
+
+                    </android.support.v7.widget.RecyclerView>
+
+
+
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/error_dialog"
+        android:orientation="vertical"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:layout_marginRight="50dp"
+        android:layout_marginLeft="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:textStyle="bold"
+            android:gravity="center"
+            android:text="@string/error_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <android.support.v7.widget.CardView
+            android:layout_marginRight="50dp"
+            android:id="@+id/refresh"
+            android:layout_marginTop="15dp"
+            android:alpha="0.7"
+            app:cardBackgroundColor="@color/gray"
+            android:foreground="?attr/selectableItemBackground"
+            android:clickable="true"
+            app:cardCornerRadius="25dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="50dp"
+            android:layout_width="match_parent"
+            android:layout_height="40dp">
+            <ImageView
+                android:src="@drawable/button_bg"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+            <TextView
+                android:layout_gravity="center"
+                android:textSize="15sp"
+                android:textColor="@color/white"
+                android:text="Повторить попытку"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </android.support.v7.widget.CardView>
+    </LinearLayout>
+    <RelativeLayout
+        android:alpha="0"
+        android:background="@color/white"
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+        <TextView
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:textColor="#000"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:id="@+id/titleBar"
+            android:text=""
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/shimmer_load"
+        android:orientation="vertical"
+        android:gravity="center|top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:src="@color/gray"
+
+            android:layout_marginTop="30dp"
+            android:visibility="gone"
+            android:layout_width="160dp"
+            android:layout_height="160dp" />
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <RelativeLayout
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <android.support.v7.widget.CardView
+                    app:cardCornerRadius="5dp"
+
+                    app:cardElevation="4dp"
+                    android:layout_margin="5dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:src="@color/gray"
+                        android:layout_width="160dp"
+                        android:layout_height="160dp" />
+
+                </android.support.v7.widget.CardView>
+            </RelativeLayout>
+            <ImageView
+
+                android:foregroundGravity="center_vertical"
+                android:background="?attr/selectableItemBackgroundBorderless"
+
+
+
+                android:layout_marginBottom="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_width="40dp"
+                android:layout_height="40dp" />
+        </RelativeLayout>
+
+
+        <TextView
+            android:textColor="#000"
+            android:textStyle="bold"
+            android:textSize="20sp"
+
+            android:text=""
+            android:gravity="center"
+            android:textAlignment="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:textColor="@color/red_light"
+            android:textStyle="normal"
+            android:textSize="15sp"
+
+            android:text=""
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            />
+    </LinearLayout>
+    <ImageView
+        android:id="@+id/back"
+        android:layout_width="60dp"
+        android:clickable="true"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:src="@drawable/ic_round_navigate_before_24px"
+        android:layout_height="50dp" />
+</RelativeLayout>

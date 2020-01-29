@@ -1,0 +1,73 @@
+{
+  "project_info": {
+    "project_number": "494464571295",
+    "firebase_url": "https://allmusic-ce797.firebaseio.com",
+    "project_id": "allmusic-ce797",
+    "storage_bucket": "allmusic-ce797.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:494464571295:android:b989bcc849011642",
+        "android_client_info": {
+          "package_name": "iwinux.com.music"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "494464571295-7oh97crevfs8er8n9ogjugqeb1sfa6fi.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCPBhltsHCgyRlFEZechQrftQHubGAOWQY"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:494464571295:android:8796965d01708c52",
+        "android_client_info": {
+          "package_name": "muzlo.iwiwinux.com.myspotify"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "494464571295-7oh97crevfs8er8n9ogjugqeb1sfa6fi.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCPBhltsHCgyRlFEZechQrftQHubGAOWQY"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

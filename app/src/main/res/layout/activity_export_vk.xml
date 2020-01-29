@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@drawable/bg_vk"
+    android:layout_height="match_parent"
+    tools:context=".ExportVkActivity">
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/lottie"
+                app:lottie_loop="true"
+                app:lottie_autoPlay="true"
+                app:lottie_rawRes="@raw/import_vk"
+                android:layout_width="match_parent"
+                android:layout_height="200dp" />
+            <TextView
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="30sp"
+                android:layout_width="match_parent"
+                android:text="@string/import_vk"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:textAlignment="center"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:layout_width="match_parent"
+                android:text="@string/paste_vk"
+                android:layout_height="wrap_content" />
+
+            <android.support.v7.widget.CardView
+                app:cardElevation="5dp"
+                app:cardCornerRadius="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <com.rengwuxian.materialedittext.MaterialEditText
+                        android:layout_width="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center|left"
+                        android:id="@+id/editText"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:maxLines="1"
+                        android:inputType="text"
+                        app:met_hideUnderline="true"
+                        android:hint="@string/test_link"
+                        android:layout_height="wrap_content" />
+                    <ImageView
+                        android:tint="@color/blue"
+                        android:padding="4dp"
+                        android:clickable="true"
+                        android:background = "?attr/selectableItemBackgroundBorderless"
+                        android:src="@drawable/ic_round_send_24px"
+                        android:id="@+id/import_vk"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp" />
+
+                    <ProgressBar
+                        android:visibility="gone"
+                        android:padding="5dp"
+                        android:id="@+id/prograss_bar"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:indeterminate="false" />
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+            <TextView
+                android:layout_marginTop="5dp"
+                android:visibility="gone"
+                android:id="@+id/load_text"
+                android:textColor="@color/white"
+                android:text="@string/loading_text"
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:layout_height="wrap_content" />
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycler"
+                android:layout_marginTop="10dp"
+                android:nestedScrollingEnabled="false"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            </android.support.v7.widget.RecyclerView>
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+    <RelativeLayout
+        android:visibility="gone"
+        android:id="@+id/bottom_player"
+        android:background="@color/gray_light"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:clickable="true"
+        android:layout_height="50dp">
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:clickable="true"
+            android:id="@+id/click"
+            android:foreground="?attr/selectableItemBackground"
+            android:gravity="center|left"
+            android:layout_height="match_parent">
+
+
+
+            <TextView
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:id="@+id/title"
+                android:layout_weight="1"
+                android:textColor="@color/gray"
+                android:scrollHorizontally="true"
+                android:singleLine="true"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:ellipsize= "marquee"
+                android:padding="16dp"
+                />
+
+
+            <ImageView
+
+                android:id="@+id/controll"
+                android:tint="@color/gray"
+                android:clickable="true"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:padding="10dp"
+                android:src="@drawable/play"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_width="50dp"
+
+                android:layout_height="match_parent" />
+            <ImageView
+                android:id="@+id/next"
+                android:padding="13dp"
+                android:src="@drawable/next"
+                android:clickable="true"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:tint="@color/gray"
+                android:layout_width="50dp"
+                android:layout_height="match_parent" />
+
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

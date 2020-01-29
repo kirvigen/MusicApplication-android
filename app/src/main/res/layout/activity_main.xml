@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </android.support.v7.widget.RecyclerView>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="match_parent">
+        <iwinux.com.music.utils.NoSwipePager
+            android:id="@+id/fl_content"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="55dp"
+            android:layout_weight="1" />
+
+
+    </LinearLayout>
+    <com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx
+        android:id="@+id/navigation"
+        android:layout_alignParentBottom="true"
+
+        app:elevation="10dp"
+        android:animateLayoutChanges="true"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_gravity="bottom"
+        android:background="#fff"
+        app:menu="@menu/navigation" />
+
+    <FrameLayout
+        android:id="@+id/frame"
+        android:layout_marginBottom="55dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </FrameLayout>
+    <FrameLayout
+        android:id="@+id/frame1"
+        android:layout_marginBottom="55dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </FrameLayout>
+    <RelativeLayout
+        android:visibility="gone"
+        android:id="@+id/bottom_player"
+        android:background="@color/gray_light"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="55dp"
+        android:layout_width="match_parent"
+        android:clickable="true"
+        android:layout_height="50dp">
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:clickable="true"
+            android:id="@+id/click"
+            android:foreground="?attr/selectableItemBackground"
+            android:gravity="center|left"
+            android:layout_height="match_parent">
+            <ImageView
+
+                android:id="@+id/playlist"
+                android:tint="@color/gray"
+                android:clickable="true"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:padding="5dp"
+                android:src="@drawable/ic_round_playlist_play_24px"
+
+                android:layout_width="50dp"
+
+                android:layout_height="match_parent" />
+
+
+            <TextView
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:id="@+id/title"
+                android:layout_weight="1"
+                android:textColor="@color/gray"
+                android:scrollHorizontally="true"
+                android:singleLine="true"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:ellipsize= "marquee"
+                android:padding="16dp"
+              />
+
+
+            <ImageView
+
+                android:id="@+id/controll"
+                android:tint="@color/gray"
+                android:clickable="true"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:padding="10dp"
+                android:src="@drawable/play"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_width="50dp"
+
+                android:layout_height="match_parent" />
+            <ImageView
+                android:id="@+id/next"
+                android:padding="13dp"
+                android:src="@drawable/next"
+                android:clickable="true"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:tint="@color/gray"
+                android:layout_width="50dp"
+                android:layout_height="match_parent" />
+
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

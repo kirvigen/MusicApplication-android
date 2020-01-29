@@ -1,0 +1,33 @@
+
+..ид песни вставляем получаем ссылку на исходни трека
+https://zvuk.com/api/tiny/track/stream?id={id}&quality=high
+
+..страница новых альбомов треков
+https://zvuk.com/sapi/grid?name=zvuk_grid_new
+
+..инфа о плейлисте
+https://zvuk.com/api/tiny/playlists?ids=1124972&include=track%2Crelease // пример получения плейлиста с новыми треками
+
+..получаем инфу по ид трекам
+https://zvuk.com/sapi/meta?tracks={id}%2C{id}
+
+..поиск
+https://zvuk.com/sapi/search?query={search}&include=artist%20track%20release%20playlist&limit=24
+..Подсказки к поиску 
+https://zvuk.com/api/tiny/search/autocomplete?query={search}&limit=5
+
+..краткие данные об артисте
+https://zvuk.com/api/tiny/artists?ids=308452
+
+
+.. возвращает популярные треки у артиста
+https://zvuk.com/api/tiny/popular-tracks?artist={id artist}&limit=20
+
+..возвращает похожих артистов
+https://zvuk.com/api/tiny/artist/related/?id={id artist}&limit=20
+
+..возвращает все данные о жанре
+https://zvuk.com/sapi/grid?name=pop_grid
+
+.. все данные об артисте
+https://zvuk.com/sapi/meta?artists=167878045&include=(artist%20(release%20false%20%3Afirst%20100))	

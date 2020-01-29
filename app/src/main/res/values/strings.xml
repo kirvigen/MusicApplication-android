@@ -1,0 +1,58 @@
+<resources>
+    <string name="app_name">MusicHub</string>
+    <string name="news">Новинки</string>
+    <string name="top">Топ</string>
+    <string name="like">Избранное</string>
+    <string name="profile">Профиль</string>
+    <string name="search">Поиск</string>
+    <string name="se">Поиск</string>
+    <string name="more">Посмотреть еще</string>
+    <string name="error_text">Не удалось загрузить список. Проверьте подклчение к сети.</string>
+    <string name="settings_m">Настройки</string>
+    <string name="reletive_artist">Похожие исполнители:</string>
+    <string name="more_button">Еще</string>
+    <string name="Resurse">Исполнители:</string>
+    <string name="albums">Альбомы:</string>
+    <string name="no_ad_id">no_aadd</string>
+
+    <string name="Search">Поиск</string>
+    <string name="no_izbran">Список избранных аудио пуст</string>
+    <string name="no_download">Список сохраненных аудио пуст</string>
+   
+    <string name="app_billing">-</string>
+
+    <string name="app_id">-</string>
+    <string name="AD_id">-</string>
+    <string name="Ad_Perehod">-</string>
+    <string name="new_fragment_ad">-</string>
+    <string name="top_fragment_ad">-</string>
+    <string name="paste_vk">Вставь ссылку на профиль вк</string>
+    <string name="download_now">(Рекомендуем скачать трек сразу)</string>
+    <string name="import_vk">Импортируй музыку из вк</string>
+    <string name="test_link">https://vk.com/userid</string>
+    <string name="loading_text">Загружаем аудиозаписи...</string>
+    <string name="play_now">Сейчас играет</string>
+
+    <string name="adaptiveplayer">Адаптивный плеер</string>
+    <string name="promokod">У меня есть промокод</string>
+    <string name="mo_ad">Отключить рекламу навсегда</string>
+    <string name="clear_all_downloads">Очистить все загруженные треки</string>
+    <string name="full_screen">На весь экран</string>
+    <string name="genre">Жанры</string>
+    <string name="back">Назад</string>
+    <string name="vpered">Вперед</string>
+
+
+    <string name="head_1">MusicHub</string>
+    <string name="text_1">Приложение с огромной библиотекой бесплатной музыки</string>
+
+    <string name="head_2">Слушайте без ограничений</string>
+    <string name="text_2">В приложении MusicHub нет ограничений по времени прослушивания музыки</string>
+    <string name="head_3">Скачивайте</string>
+    <string name="text_3">В MusicHub реализована возможность загружать треки</string>
+    <string name="head_4">Импортируйте аудиозаписи из вк</string>
+    <string name="text_4">Зайдите в раздел "Избранное" и нажмите на иконку вк</string>
+    <string name="off_ad">Отключить рекламу</string>
+
+
+</resources>

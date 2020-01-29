@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/error_text"
+        android:textSize="18sp"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        android:text="Увы, но нам не удолось ничего найти по вашему запросу."
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/result"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_marginTop="50dp"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ProgressBar
+                android:visibility="gone"
+                android:layout_marginTop="10dp"
+                android:layout_gravity="center"
+                android:id="@+id/progress_bar"
+                android:layout_width="40dp"
+                android:layout_height="40dp" />
+            <LinearLayout
+
+                android:id="@+id/albums"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_marginTop="20dp"
+                    android:gravity="center"
+                    android:layout_marginBottom="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_weight="1"
+                        android:textSize="20sp"
+                        android:layout_marginLeft="20dp"
+                        android:text="@string/albums"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:id="@+id/moreAlbums"
+                        android:textSize="15sp"
+                        android:textColor="@color/red_light"
+                        android:text="@string/more"
+                        android:layout_marginRight="20sp"
+                        android:textStyle="bold"
+                        android:gravity="bottom"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+                <RelativeLayout
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/recyclerAlbum"
+                        android:nestedScrollingEnabled="false"
+                        android:layout_marginLeft="20dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="175dp">
+
+                    </android.support.v7.widget.RecyclerView>
+
+
+
+                </RelativeLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/artists"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                   android:layout_marginTop="8dp"
+                    android:gravity="center"
+                    android:layout_marginBottom="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_weight="1"
+                        android:textSize="20sp"
+                        android:layout_marginLeft="20dp"
+                        android:text="@string/Resurse"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:id="@+id/moreArtist"
+                        android:textSize="15sp"
+                        android:textColor="@color/red_light"
+                        android:text="@string/more"
+                        android:layout_marginRight="20sp"
+                        android:gravity="bottom"
+                        android:textStyle="bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/recyclerArtist"
+                        android:nestedScrollingEnabled="false"
+                        android:layout_marginLeft="20dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                    </android.support.v7.widget.RecyclerView>
+
+                </RelativeLayout>
+            </LinearLayout>
+            <android.support.v7.widget.RecyclerView
+                android:layout_marginTop="10dp"
+                android:id="@+id/tracks_search"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            </android.support.v7.widget.RecyclerView>
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+    <RelativeLayout
+        android:layout_marginTop="10dp"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.loopeer.shadow.ShadowView
+            android:id="@+id/shadow_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:foreground="?attr/selectableItemBackground"
+            android:elevation="10dp"
+            app:cornerRadius="16dp"
+            app:shadowMargin="10dp"
+            app:shadowRadius="5dp">
+            <LinearLayout
+                android:background="@color/white"
+
+                android:clickable="true"
+                android:foreground="?attr/selectableItemBackground"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <com.rengwuxian.materialedittext.MaterialEditText
+                        android:layout_width="match_parent"
+                        android:id="@+id/editText"
+                        app:met_floatingLabelAnimating="false"
+
+                        app:met_floatingLabel="none"
+                        android:layout_height="wrap_content"
+                        android:imeOptions="actionSearch"
+                        android:layout_marginHorizontal="8dp"
+                        android:maxLines="1"
+                        android:inputType="text"
+                        android:hint="@string/Search"
+                        app:met_textColor="#000"
+                        app:met_textColorHint="@color/gray"
+                        app:met_hideUnderline="true"
+
+                        />
+                    <ListView
+
+                        android:id="@+id/list_view"
+                        android:background="@color/white"
+                        android:focusable="true"
+                        android:descendantFocusability="beforeDescendants"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                    </ListView>
+                </LinearLayout>
+
+                <!--<TextView-->
+                <!--android:id="@+id/textQuery"-->
+                <!--android:layout_gravity="center|left"-->
+                <!--android:layout_marginLeft="10dp"-->
+                <!--android:text="Поиск по музыке..."-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content" />-->
+
+
+
+            </LinearLayout>
+        </com.loopeer.shadow.ShadowView>
+
+
+    </RelativeLayout>
+</RelativeLayout>
